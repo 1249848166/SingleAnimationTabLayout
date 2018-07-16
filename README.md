@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 如上所见用到了他们的功能。如果需要用到这些功能的可以不用再添加这些依赖了。
 * c.因为用到titlebar，所以在manifest中，需要修改当前activity的theme为没有actionbar的，否则会冲突。
-下面在application的主题下新建一个主题，取名为MyNotitle
+下面在styles文件下，application的主题下新建一个主题，取名为MyNotitle
 ```Java
 <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         <item name="windowNoTitle">true</item>
     </style>
 ```
-然后在manifest文件里，整个application主题用默认的，当前activity这个i顶主题为MyNotitle
+然后在manifest文件里，整个application主题用默认的，当前activity这个主题设置为MyNotitle
 ```Java
 <application
         android:allowBackup="true"
