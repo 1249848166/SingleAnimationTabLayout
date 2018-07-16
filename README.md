@@ -19,6 +19,16 @@
 
 ```
 ## 3.在你的项目中的使用示例
+布局
+```Java
+<?xml version="1.0" encoding="utf-8"?>
+<su.com.singleanimationtablayout.SingleAnimationTabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#aaaaaa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+```
+activity
 ```Java
 package su.com.learn.activity;
 
