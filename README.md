@@ -14,7 +14,7 @@
 在app的build.gradle中添加：<br>
 ```Java
 	dependencies {
-	        implementation 'com.github.1249848166:SingleAnimationTabLayout:1.0'
+	        implementation 'com.github.1249848166:SingleAnimationTabLayout:1.01'
 	}
 
 ```
