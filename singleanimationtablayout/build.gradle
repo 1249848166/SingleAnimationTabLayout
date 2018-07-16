@@ -49,5 +49,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'design'
     })
 
-    implementation 'com.android.support:design:27.1.1'
+    //implementation 'com.android.support:design:27.1.1'
 }
