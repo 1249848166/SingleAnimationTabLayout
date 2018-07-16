@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.1249848166'
 
 android {
     compileSdkVersion 27
@@ -29,23 +27,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    //这个依赖用来改变状态栏渗透效果
-    implementation ('com.jaeger.statusbaruitl:library:1.3.5', {
-        exclude group: 'com.android.support', module: 'design'
-    })
-    //这个依赖用来加载网络图片
-    implementation ('eu.the4thfloor.volley:com.android.volley:2015.05.28', {
-        exclude group: 'com.android.support', module: 'design'
-    })
-    //这个依赖用来制作圆形图片
-    implementation ('de.hdodenhof:circleimageview:2.2.0', {
-        exclude group: 'com.android.support', module: 'design'
-    })
-
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.jaeger.statusbaruitl:library:1.3.5'//这个依赖用来改变状态栏渗透效果
+    implementation 'eu.the4thfloor.volley:com.android.volley:2015.05.28'//这个包用来加载网络图片
+    implementation 'de.hdodenhof:circleimageview:2.2.0'//这个依赖用来制作原型
 }
