@@ -14,10 +14,11 @@
 在app的build.gradle中添加：<br>
 ```Java
 	dependencies {
-	        implementation 'com.github.1249848166:SingleAnimationTabLayout:1.01'
+	        implementation 'com.github.1249848166:SingleAnimationTabLayout:2.1.0'
 	}
 
 ```
+从1.0开始就发现依赖冲突，然后一晚上重新发布了几十次也不容易。不过终于可以用了。2.1.0版本可以正常使用，之前的版本都有依赖冲突，无法正常使用。
 ## 3.在你的项目中的使用示例
 布局
 ```Java
@@ -212,4 +213,13 @@ public class MainActivity extends AppCompatActivity {
 ```Java
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-* e.如果以上还有什么疑惑，请查阅源项目中的案例，或者加qq1249848166交流。
+* e.如果你使用了更新的support或design版本，可以通过下面方式将本依赖中的旧版本排除，使用你项目的新版本：
+```Java
+    implementation ('com.github.1249848166:SingleAnimationTabLayout:2.1.0', {
+        exclude group: 'com.android.support', module: 'design'
+    })
+    implementation 'com.android.support:appcompat-v7:x.x.x'
+    implementation 'com.android.support:design:x.x.x'
+```
+其中x指代数字
+* f.如果以上还有什么疑惑，请查阅源项目中的案例，或者加qq1249848166交流。
